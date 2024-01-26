@@ -1,0 +1,15 @@
+<routes>
+    <vType id="car"
+        vClass="passenger" lenght="5" accel="3.5" decel="2.2"
+        sigma="1.0" maxSpeed="10"/>
+    
+    <vType id="ev"
+        vClass="emergency" length="7" accel="5.5" decel="2.2" sigma="1.0"
+        maxSpeed="20" guiShape="emergency" speedFactor="2.0"
+        manGapLat="0.2"/>
+    
+    <route id="route_0" edges="E1 E2 E3 E4 E5 E6 E7 E8" />
+
+    <vehicle id="0" type="car" route="route_0" depart="0"/>
+
+</routes>
