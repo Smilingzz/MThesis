@@ -11,3 +11,5 @@ Initial plan*:
   - Final paper writing.
 
 *I aim to write on the paper continously alongside all other matters up to May as well.
+
+Link to paper (work in progress): https://www.overleaf.com/read/bzxkgfktvsns#198043 
