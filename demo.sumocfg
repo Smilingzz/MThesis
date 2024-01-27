@@ -2,5 +2,6 @@
     <input>
         <net-file value="small_scenario.net.xml"/>
         <route-files value="demo.rou.xml"/>
+        <additional-files value="demo.add.xml"/>
     </input>
 </configuration>
