@@ -9,6 +9,7 @@ else:
     sys.exit("declare SUMO HOME")
 
 from sumolib import checkBinary
+import sumolib
 import traci
 
 def get_options():
@@ -18,16 +19,20 @@ def get_options():
     options, args = opt_parser.parse_args()
     return options
 
+def generateRoutes():
+    net = sumolib.net.readNet('map.net.xml')
+    allEdges = net.getEdges() #Returns a list of xml data containing all edges.
+
 def run():
     step = 0
+    generateRoutes()
     while traci.simulation.getMinExpectedNumber() > 0:
         traci.simulationStep()
         step += 1
 
+        #traci.vehicle.moveToXY("carflow1.2, ")
         if step == 100:
             print(traci.vehicle.getIDList())
-            traci.vehicle.changeTarget("carflow1.3", "-E27")
-            traci.vehicle.changeTarget("carflow2.3", "-E11")
 
     traci.close()
     sys.stdout.flush()
@@ -41,5 +46,5 @@ if __name__ == "__main__":
     else:
         sumoBinary = checkBinary('sumo-gui')
 
-    traci.start([sumoBinary, "-c", "demo.sumocfg", "--tripinfo-output", "tripinfo.xml"])
+    traci.start([sumoBinary, "-c", "sumo.sumocfg", "--tripinfo-output", "tripinfo.xml"])
     run()
