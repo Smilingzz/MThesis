@@ -8,9 +8,10 @@
         maxSpeed="20" guiShape="emergency" speedFactor="2.0"
         manGapLat="0.2"/>
     
-    <route id="route_0" edges="E1 E2 E3 E4 E5 E6 E7 E8" />
-    <flow id="carflow" type="car" beg="0" end="0" number="5" from="E1" to="E8" />
+    <route id="route_0" edges="-E10 E14 E15 -E24 -E27 E28 E18 E19 -E11" />
+    <flow id="carflow1" type="car" beg="0" end="0" number="5" from="-E10" to="-E11" />
+    <flow id="carflow2" type="car" beg="0" end="0" number="5" from="-E22" to="-E21" />
 
-    <!-- <vehicle id="0" type="car" route="route_0" depart="0"/> -->
+    <!--<vehicle id="0" type="car" route="route_0" depart="0"/> -->
 
 </routes>

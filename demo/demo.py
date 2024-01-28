@@ -25,8 +25,9 @@ def run():
         step += 1
 
         if step == 100:
-            traci.vehicle.changeTarget("carflow.3", "E9")
-            traci.vehicle.changeTarget("carflow.1", "E9")
+            print(traci.vehicle.getIDList())
+            traci.vehicle.changeTarget("carflow1.3", "-E27")
+            traci.vehicle.changeTarget("carflow2.3", "-E11")
 
     traci.close()
     sys.stdout.flush()
